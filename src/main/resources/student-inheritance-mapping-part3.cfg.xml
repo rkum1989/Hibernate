@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <property name="hibernate.connection.url">jdbc:hsqldb:hsql://localhost/testdb</property>
+        <property name="hibernate.connection.user">SA</property>
+        <property name="hibernate.connection.password"> </property>
+        <property name="dialect">org.hibernate.dialect.HSQLDialect</property>
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property>
+
+        <mapping class="com.java.hibernate.example.inheritance.mapping.part3.Student"/>
+        <mapping class="com.java.hibernate.example.inheritance.mapping.part3.CurrentStudent"/>
+        <mapping class="com.java.hibernate.example.inheritance.mapping.part3.OldStudent"/>
+        <mapping class="com.java.hibernate.example.inheritance.mapping.part3.WeekdayStudent"/>
+        <mapping class="com.java.hibernate.example.inheritance.mapping.part3.WeekendStudent"/>
+    </session-factory>
+</hibernate-configuration>
